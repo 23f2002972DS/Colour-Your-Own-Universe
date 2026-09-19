@@ -18,10 +18,10 @@ This project is built for Jupyter Notebook or Google Colab environments. It requ
 
 ## Installation & Usage
 1. Open the notebook in your preferred *Jupyter environment* or *Google Colab*.
-2. Run the first cell to install the required astronomy packages (```bash!pip install astroquery astropy```).
-3. Execute the setup cells to load the Python tools and initialize the target library.
-4. Run the randomizer cell to automatically select one of the 15 targets and a specific colormap.
-5. The notebook will automatically download the 700x700 pixel image data, apply the brightness stretch, and plot the final visualization.
+2. Run the first cell to install the required astronomy packages (```bash !pip install astroquery astropy```).
+4. Execute the setup cells to load the Python tools and initialize the target library.
+5. Run the randomizer cell to automatically select one of the 15 targets and a specific colormap.
+6. The notebook will automatically download the 700x700 pixel image data, apply the brightness stretch, and plot the final visualization.
 
 ## Included Targets
 The target library comes pre-configured with the standard astronomical names, positional data, and optimal radius sizes for:-
