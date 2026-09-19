@@ -1,6 +1,9 @@
 # Colour-Your-Own-Universe
 An interactive Python notebook utilizing Astropy and Astroquery to retrieve, process, and visualize real astronomical survey images. This project enables users to download raw telescope data of famous galaxies, nebulae, and star clusters, mathematically enhance faint structural details, and apply scientific colormaps to explore deep-space objects.
 
+## Contents
+- `Colour_Your_Own_Universe.ipynb`: analysis and modeling notebook
+
 ## Features
 - Real Astronomical Data: Fetches raw imagery from the DSS2 Red survey band using the SkyView interface.
 - Curated Target Library: Includes a built-in dictionary of 15 predefined space objects, categorized into Galaxies, Nebulae, Star Clusters, and Supernova Remnants.
