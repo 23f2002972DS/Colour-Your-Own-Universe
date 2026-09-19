@@ -33,3 +33,16 @@ The target library comes pre-configured with the standard astronomical names, po
 - Star Clusters: _Pleiades (M45), Hercules Globular Cluster (M13), Globular Cluster (M15)_.
 - Supernova Remnants: _Crab Nebula (M1), Veil Nebula (NGC 6992)_.
 
+## How It Works
+The notebook walks through the standard astronomical image processing pipeline in a few automated steps:
+1. **Target Selection:** A target object and a scientific colormap (e.g., magma, inferno, viridis) are randomly selected from the built-in dictionary[cite: 1]. 
+2. **Data Retrieval:** The custom `download_band` function uses `astroquery` (`SkyView`) to query online astronomical databases[cite: 1]. It fetches raw image data from the "DSS2 Red" survey based on the target's celestial coordinates and size, returning a 700x700 pixel array[cite: 1].
+3. **Data Cleaning:** The raw data array is cleaned using `numpy` to replace any infinite or invalid values (`NaN`) with usable numerical data points[cite: 1].
+4. **Brightness Normalization:** Raw telescope images have extreme contrast, containing both very bright cores and very faint dust lanes. The code uses `astropy.visualization` to apply a 99.5% `PercentileInterval` and an `AsinhStretch`[cite: 1]. This mathematical transformation compresses the dynamic range, allowing faint structures to be seen clearly without completely losing the bright parts[cite: 1].
+5. **Visualization:** Finally, `matplotlib` takes the normalized data and applies your chosen colormap to render the final image[cite: 1].
+
+## Future Enhancements
+* **RGB Composites:** Expanding the tool to download and combine three different survey bands to create full-color RGB composite images[cite: 1].
+
+## Acknowledgments
+* Image data retrieved via the `astroquery.skyview` interface[cite: 1].
